@@ -12,16 +12,15 @@ def index ():
 @app.route('/message')
 def messages():
 	return jsonify({
-        'id': uuid.uuid4(),
-        'message': 'Official Iguanodon Message'
+        'messages':[{'id': uuid.uuid4(), 'message': 'abc'} for x in range(10)]
         })
 
 # routes can be nested, and strings can be grabbed with the <> syntax
-@app.route('/message/<message>')
-def message(message):
+@app.route('/message/<name>')
+def message(name):
     return jsonify({
         'id': uuid.uuid4(),
-        'message': message
+        'message': "what's up {0}".format(name)
         })
 
 if __name__ == '__main__':
