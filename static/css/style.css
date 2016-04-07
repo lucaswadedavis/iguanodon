@@ -1,0 +1,10 @@
+div.header {
+    background: #333;
+    padding: 20px;
+}
+
+img#iguanodon {
+   width: 200px; 
+   margin: 0;
+   padding: 0;
+}
